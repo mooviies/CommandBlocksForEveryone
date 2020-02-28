@@ -1,0 +1,18 @@
+{
+  "language.name": "English",
+  "language.region": "United States",
+  "language.code": "en_us",
+  "command.cbfe.allow.success.single": "Granting command block privileges to player %s",
+  "command.cbfe.allow.success.multiple": "Granting command block privileges to %s players",
+  "command.cbfe.allow.success.global": "Granting command block privileges globally. (Won't affect specific player privileges)",
+  "command.cbfe.deny.success.single": "Revoking command block privileges from player %s",
+  "command.cbfe.deny.success.multiple": "Revoking command block privileges from %s players",
+  "command.cbfe.deny.success.global": "Revoking command block privileges globally. (Won't affect specific player privileges)",
+  "command.cbfe.clear.success.single": "Clearing command block privileges from player %s. (Now using global privilege)",
+  "command.cbfe.clear.success.multiple": "Clearing command block privileges from %s players. (Now using global privilege)",
+  "event.cbfe.block.placed.deny": "%s was BLOCKED from placing a %s at %s %s %s",
+  "event.cbfe.block.placed.allow": "%s placed a %s at %s %s %s",
+  "event.cbfe.block.edit.deny": "%s was BLOCKED from editing a %s at %s %s %s",
+  "event.cbfe.block.edit.allow": "%s is editing a %s at %s %s %s",
+  "itemGroup.cbforeveryone": "Command Blocks"
+}
