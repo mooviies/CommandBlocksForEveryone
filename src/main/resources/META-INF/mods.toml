@@ -1,11 +1,19 @@
-# This is an example mods.toml file. It contains the data relating to the loading mods.
-# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
-# The overall format is standard TOML format, v0.5.0.
-# Note that there are a couple of TOML lists in this file.
-# Find more information on toml format here:  https://github.com/toml-lang/toml
-# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+# Command Blocks For Everyone. Minecraft Mod.
+# Copyright (C) 2020 mooviies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 modLoader="javafml" #mandatory
-# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
 loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # A URL to refer people to when problems occur with this mod
 # issueTrackerURL="http://my.issue.tracker/" #optional
@@ -13,9 +21,7 @@ loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft versio
 [[mods]] #mandatory
 # The modid of the mod
 modId="cbforeveryone" #mandatory
-# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="${file.jarVersion}" #mandatory
- # A display name for the mod
 displayName="Command Blocks For Everyone" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 # updateJSONURL="http://myurl.me/" #optional
@@ -27,7 +33,6 @@ displayName="Command Blocks For Everyone" #mandatory
 # credits="Thanks for this example mod goes to Java" #optional
 # A text field displayed in the mod UI
 authors="mooviies" #optional
-# The description text for the mod (multi line!) (#mandatory)
 description='''
 This mod gives the ability to edit command blocks to non creative players.
 Permissions can be set globally or on a player basis.

@@ -1,11 +1,26 @@
+/*
+Command Blocks For Everyone. Minecraft Mod.
+Copyright (C) 2020 mooviies
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 package com.mooviies.cbforeveryone;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CommandBlockBlock;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.network.NetworkManager;
 import net.minecraft.network.PacketThreadUtil;
 import net.minecraft.network.play.ServerPlayNetHandler;
 import net.minecraft.network.play.client.CUpdateCommandBlockPacket;
@@ -19,8 +34,6 @@ import net.minecraft.util.StringUtils;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.Objects;
 
 public class CBFEServerPlayNetHandler extends ServerPlayNetHandler {
     private MinecraftServer _server;
