@@ -9,16 +9,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
 package com.mooviies.cbforeveryone.registry;
 
 import com.mooviies.cbforeveryone.CBFECreativeTabs;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CommandBlockBlock;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Rarity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 

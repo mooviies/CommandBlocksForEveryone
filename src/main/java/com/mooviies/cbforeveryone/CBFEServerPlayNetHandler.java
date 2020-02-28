@@ -26,7 +26,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 
-public class CBFEServerPlayNetHandler extends ServerPlayNetHandler {
+public final class CBFEServerPlayNetHandler extends ServerPlayNetHandler {
     private MinecraftServer _server;
 
     public CBFEServerPlayNetHandler(ServerPlayerEntity playerIn) {

@@ -75,14 +75,14 @@ public class CBFEEventsHandler {
         String playerName = event.getEntity().getDisplayName().getString();
         String blockName = new TranslationTextComponent(block.getTranslationKey()).getString();
 
-        if(!CBFEState.canUseCommandblock(playerEntity))
+        if(!CBFEAPI.getPermission(playerEntity))
         {
             event.setCanceled(true);
-            LOGGER.info(new TranslationTextComponent("event.cbfe.block.placed.deny", playerName, blockName, pos.getX(), pos.getY(), pos.getZ()).getString());
+            LOGGER.info(String.format("%s was BLOCKED from placing a %s at %s %s %s", playerName, blockName, pos.getX(), pos.getY(), pos.getZ()));
         }
         else
         {
-            LOGGER.info(new TranslationTextComponent("event.cbfe.block.placed.allow", playerName, blockName, pos.getX(), pos.getY(), pos.getZ()).getString());
+            LOGGER.info(String.format("%s placed a %s at %s %s %s", playerName, blockName, pos.getX(), pos.getY(), pos.getZ()));
         }
     }
 
@@ -92,10 +92,10 @@ public class CBFEEventsHandler {
         World world = event.getWorld();
         PlayerEntity playerEntity = event.getPlayer();
 
-        if(world.isRemote || event.getHand() != Hand.MAIN_HAND || playerEntity.isCreative())
+        if(world.isRemote || event.getHand() != Hand.MAIN_HAND)
             return;
 
-        if(!CBFEState.canUseCommandblock(playerEntity))
+        if(!CBFEAPI.getPermission(playerEntity))
             return;
 
         BlockPos pos = event.getPos();
@@ -123,10 +123,10 @@ public class CBFEEventsHandler {
         String playerName = playerEntity.getDisplayName().getString();
         String blockName = new TranslationTextComponent(event.getWorld().getBlockState(pos).getBlock().getTranslationKey()).getString();
 
-        if(!CBFEState.canUseCommandblock(playerEntity))
+        if(!CBFEAPI.getPermission(playerEntity))
         {
             if(!event.getWorld().isRemote)
-                LOGGER.info(new TranslationTextComponent("event.cbfe.block.edit.deny", playerName, blockName, pos.getX(), pos.getY(), pos.getZ()).getString());
+                LOGGER.info(String.format("%s was BLOCKED from editing a %s in dimension %s at %s %s %s", playerName, blockName, event.getWorld().getDimension().getType().getId(), pos.getX(), pos.getY(), pos.getZ()));
             return;
         }
 
@@ -138,7 +138,7 @@ public class CBFEEventsHandler {
 
         if(!isRemote)
         {
-            LOGGER.info(new TranslationTextComponent("event.cbfe.block.edit.allow", playerName, blockName, pos.getX(), pos.getY(), pos.getZ()).getString());
+            LOGGER.info(String.format("%s is editing a %s in dimension %s at %s %s %s", playerName, blockName, event.getWorld().getDimension().getType().getId(), pos.getX(), pos.getY(), pos.getZ()));
         }
 
         if(isRemote)

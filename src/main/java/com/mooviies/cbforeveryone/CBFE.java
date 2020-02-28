@@ -19,7 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("cbforeveryone")
-public class CBFE
+public final class CBFE
 {
     public static final String MOD_ID = "cbforeveryone";
     private static final Logger LOGGER = LogManager.getLogger();
@@ -33,6 +33,7 @@ public class CBFE
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        CBFEPermissionService.load();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

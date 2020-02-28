@@ -8,7 +8,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
  */
 package com.mooviies.cbforeveryone;
 
-public class CBFEConfiguration {
+public final class CBFEConfiguration {
 
     private CBFEConfiguration() {}
 

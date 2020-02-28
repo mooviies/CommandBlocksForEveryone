@@ -12,7 +12,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
-public class CBFETabDefault extends ItemGroup {
+public final class CBFETabDefault extends ItemGroup {
     public CBFETabDefault() {
         super(CBFE.MOD_ID);
     }

@@ -8,7 +8,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
  */
 package com.mooviies.cbforeveryone;
 
-public class CBFECreativeTabs {
+public final class CBFECreativeTabs {
     private CBFECreativeTabs() {}
 
     public static final CBFETabDefault DEFAULT = new CBFETabDefault();
